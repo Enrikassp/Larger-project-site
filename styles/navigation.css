@@ -1,0 +1,62 @@
+header {
+  nav {
+    height: 70px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    background-color: transparent;
+    z-index: 999;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+
+    .container {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+      height: 100%;
+
+      .right-nav {
+        .mobile_item-list {
+          display: none;
+
+          i {
+            font-size: 22px;
+            color: black;
+          }
+        }
+
+        .nav-item-list {
+          display: flex;
+          flex-direction: row;
+          gap: 50px;
+
+          .nav-item {
+            text-decoration: none;
+            color: var(--pilka-spalva);
+            font-family: "Mandali", sans-serif;
+            transition: color 0.2s ease-in-out;
+          }
+
+          .nav-item.active {
+            position: relative;
+            color: var(--zalia-spalva);
+          }
+
+          .nav-item.active::after {
+            content: "";
+            position: absolute;
+            bottom: -3px;
+            left: 10px;
+            right: 10px;
+            border-radius: 10px;
+            border-bottom: 2px solid var(--zalia-spalva);
+          }
+
+          .nav-item:hover {
+            color: var(--zalia-spalva) !important;
+          }
+        }
+      }
+    }
+  }
+}
